@@ -7,8 +7,9 @@ var router = function(req, res) {
     handlers.handlerHome(req, res);
   } //else if (url === "/cities") {
   //}
-  else if (["/index.js", "/style.css"].includes(url)) {
+  else if (["/index.js", "/style.css","/dom.js","/xhr.js"].includes(url)) {
     // run public files
+    handlers.handlerPublic(req,res,url);
   } else {
     //404
     handlers.handler404(req, res);
