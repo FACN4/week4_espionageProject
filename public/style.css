@@ -1,0 +1,20 @@
+/* MOBILE FIRST */
+h1 {
+  text-align: center;
+  font-size: 35px;
+}
+form {
+  text-align: center;
+}
+
+/* TABLET SECOND */
+@media only screen and (min-width: 480px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+/* DESKTOP THIRD */
+@media only screen and (min-width: 1100px) {
+
+}

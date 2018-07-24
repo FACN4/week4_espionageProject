@@ -1,3 +1,21 @@
+<!DOCTYPE html>
 <html>
-
+  <head>
+    <title>Cities</title>
+    <link rel="shortcut icon" href="https://user-images.githubusercontent.com/28222381/43135579-8e0af446-8f4e-11e8-8485-6bdc248a4ee8.png" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <h1>Cities of the World</h1>
+    </header>
+    <section>
+      <form id="searchForm" action="/cities" method="post">
+        <input id="searchInput" type="text" name="searchBox" maxlength="30" placeholder="e.g. Nazareth" onkeypress="sendForm()" required>
+      </form>
+    </section>
+  </body>
+  <script src="xhr.js"></script>
+  <script src="dom.js"></script>
 </html>
