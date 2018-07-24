@@ -11,6 +11,7 @@ var router = function(req, res) {
     // run public files
   } else {
     //404
+    handlers.handler404(req, res);
   }
 };
 

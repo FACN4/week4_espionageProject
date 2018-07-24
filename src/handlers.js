@@ -27,7 +27,22 @@ var handlerPublic = function(req, res, url) {};
 
 var handlerCities = function(req, res, url) {};
 
-var handler404 = function(req, res, url) {};
+var handler404 = function(req, res) {
+  fs.readFile(
+    path.join(__dirname, "..", "public", "404.html"),
+    "utf8",
+    (err, file) => {
+      if (err) {
+        handler500(res);
+        return;
+      } else {
+        res.writeHead(200, { "content-type": "text/html" });
+        res.end(file);
+      }
+    }
+  );
+
+};
 
 module.exports = {
   handlerHome,
