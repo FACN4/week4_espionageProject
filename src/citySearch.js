@@ -1,7 +1,5 @@
 const citiesJSON = require("./cities.json");
 
-
-
 const search = function (input, cities){
   var allMatches = includesSearch(input, cities);
   var sortedMatches = sortByNameLength(allMatches);
