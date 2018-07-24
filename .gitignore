@@ -1,5 +1,5 @@
 node_modules
 package-lock.json
-.env
+src/.env
 .nyc_output
 src/cities.json
