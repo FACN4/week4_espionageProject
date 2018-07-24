@@ -5,7 +5,8 @@ var router = function(req, res) {
   if (url === "/") {
     // run index.html
     handlers.handlerHome(req, res);
-  } //else if (url === "/cities") {
+  }
+   //else if (url === "/cities") {
   //}
   else if (["/index.js", "/style.css","/dom.js","/xhr.js"].includes(url)) {
     // run public files
