@@ -1,17 +1,23 @@
 const citiesJSON = require("./cities.json");
 
+
+
+const search = function (input, cities){
+  var allMatches = includesSearch(input, cities);
+  var sortedMatches = sortByNameLength(allMatches);
+  var top8Matches = sortedMatches.slice(0,8);
+  return top8Matches;
+}
+
 const includesSearch = function (input, cities){
   let output = [];
   let numCities = cities.length
   for (let i = 0; i < numCities; i++){
-    if (cities[i].name.includes(input)){
+    if (cities[i].name.toUpperCase().includes(input.toUpperCase())){
       output.push(cities[i]);
     }
   }
-  var sortedCities = sortByNameLength(output);
-  var top8Cities = sortedCities.slice(0,8);
-  console.log(top8Cities);
-  return top8Cities;
+  return output;
 }
 
 const sortByNameLength = function (arr){
@@ -20,4 +26,9 @@ const sortByNameLength = function (arr){
   })
 }
 
-includesSearch("London",citiesJSON);
+module.exports = {
+  search,
+  includesSearch,
+  sortByNameLength,
+  citiesJSON
+}
