@@ -7,6 +7,23 @@ form {
   text-align: center;
 }
 
+ul {
+  text-align: center;
+  display: block;
+}
+li{
+  display:block;
+
+}
+li:hover{
+  background-color: grey;
+}
+
+li div {
+  display: inline-block;
+}
+
+
 /* TABLET SECOND */
 @media only screen and (min-width: 480px) {
   h1 {
