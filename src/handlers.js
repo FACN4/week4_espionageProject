@@ -46,7 +46,9 @@ fs.readFile(path.join(__dirname, '..', 'public', url ),"utf8" ,(err, file) => {
 
 };
 
-var handlerCities = function(req, res, url) {};
+var handlerCities = function(req, res, url) {
+
+  };
 
 var handler404 = function(req, res) {
   fs.readFile(
