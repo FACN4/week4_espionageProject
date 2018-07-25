@@ -11,7 +11,7 @@ var handler500 = function(res) {
 var handlerHome = function(req, res) {
   fs.readFile(
     path.join(__dirname, "..", "public", "index.html"),
-    "utf8",
+
     (err, file) => {
       if (err) {
         handler500(res);
@@ -26,24 +26,32 @@ var handlerHome = function(req, res) {
 
 var handlerPublic = function(req, res, url) {
   var extension = url.split(".")[1];
+  console.log(extension);
   var extensionType = {
     html: "text/html",
     css: "text/css",
-    js: "application/javascript"
+    js: "application/javascript",
+    jpg: "image/jpeg"
   };
+
+    console.log("extension is",path.join(__dirname, "..", "public", url))
+
   fs.readFile(
     path.join(__dirname, "..", "public", url),
-    "utf8",
     (err, file) => {
       if (err) {
+        console.log(err);
         handler500(res);
         return;
       } else {
+
         res.writeHead(200, { "Content-Type": extensionType[extension] });
-        res.end(file);
+      res.end(file);
+
       }
-    }
-  );
+    });
+
+
 };
 
 var handlerCities = function(req, res) {
@@ -60,6 +68,7 @@ var handler404 = function(req, res) {
     "utf8",
     (err, file) => {
       if (err) {
+        console.log(err)
         handler500(res);
         return;
       } else {
