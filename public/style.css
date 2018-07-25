@@ -1,4 +1,16 @@
 /*/////////Body and Structure////////// */
+#pxlrimage {
+   border-radius: 8px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 75%;
+
+}
+
+#hoo {
+  display: none;
+}
 
 body {
   background-color: #e6ffff;
@@ -9,40 +21,40 @@ body {
   text-align: center;
 }
 input[type=text] {
-  width: 50%;
+  width: 30%;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
   background-color: white;
-  background-image: url('searchicon.png');
+
   background-position: 10px 10px;
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
   }
-/*
+
     input[type=text] {
         -webkit-transition: width 0.4s ease-in-out;
         transition: width 0.4s ease-in-out;
     }
 
     input[type=text]:focus {
-        width: 100%;
+        width: 50%;
     }
-    */
+
 
 /*//////////////////////// MOBILE FIRST//////////////////// */
 h1 {
-  text-align: center;
+  margin: auto;
   font-size: 35px;
 }
 form {
   text-align: center;
 }
 
-<<<<<<< HEAD
+
 /* ////////////////TABLET SECOND ///////////*/
-=======
+
 li:hover{
   background-color: grey;
 }
@@ -50,7 +62,7 @@ li:hover{
 #mapid { height: 180px; }
 
 /* TABLET SECOND */
->>>>>>> master
+
 @media only screen and (min-width: 480px) {
   h1 {
     font-size: 50px;
@@ -59,5 +71,44 @@ li:hover{
 
 /* ///////////////////DESKTOP THIRD //////////////////*/
 @media only screen and (min-width: 1100px) {
+
+  #f1_container {
+    position: relative;
+    margin: 10px auto;
+    width: 450px;
+    height: 281px;
+    z-index: 1;
+  }
+  #f1_container {
+    perspective: 1000;
+  }
+  #f1_card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1.0s linear;
+  }
+  #f1_container:hover #f1_card {
+    transform: rotateY(180deg);
+    box-shadow: -5px 5px 5px #aaa;
+  }
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .face.back {
+    display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    background-color: #aaa;
+  }
+  #hoo {
+    display: block;
+  }
 
 }
