@@ -1,7 +1,7 @@
-var searchInput = document.getElementById("searchInput");
+var searchInput = document.getElementById('searchInput');
 console.log(searchInput);
 
-var sendForm = function() {
+var sendForm = function () {
   var url = searchWrapper(searchInput.value);
 
   xhrAPI(url, appendCities);
