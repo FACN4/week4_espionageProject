@@ -11,6 +11,8 @@ li:hover{
   background-color: grey;
 }
 
+#mapid { height: 180px; }
+
 /* TABLET SECOND */
 @media only screen and (min-width: 480px) {
   h1 {
