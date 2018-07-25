@@ -1,8 +1,7 @@
 //searchInput from index.HTML
-var searchInput = document.getElementById("searchInput");
-console.log(searchInput);
+var searchInput = document.getElementById("textInput");
 
-var sendForm = function() {
+var keyUp = function(){
   var url = searchWrapper(searchInput.value); // searchWrapper defined in xhr.js
   xhrAPI(url, appendCities); //xhrAPI defined in xhr.js
 };
