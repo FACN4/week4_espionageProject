@@ -1,12 +1,10 @@
 //searchInput from index.HTML
-var searchInput = document.getElementById("searchInput");
-console.log(searchInput);
+var textInput = document.getElementById("textInput");
 
-var sendForm = function() {
-  var url = searchWrapper(searchInput.value); // searchWrapper defined in xhr.js
+var keyUp = function(){
+  var url = searchWrapper(textInput.value); // searchWrapper defined in xhr.js
   xhrAPI(url, console.log);
   xhrAPI(url, appendCities); //xhrAPI defined in xhr.js
-
 };
 
 //creates a drop down menu from the array of cities. Is called by an XHR request.
@@ -50,13 +48,6 @@ var appendCities = function(arrOfCities) {
         var query = city.name;
         var id = "pxlrimage";
         pixabyXhrApi(query, id); //Needs console
-        var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-          attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-          maxZoom: 18,
-          id: 'mapbox.streets',
-          accessToken: 'pk.eyJ1IjoiZGVuaXNrZW50IiwiYSI6ImNqazEyN25tYjBjM3EzdGtjZXM5Mnp3dXMifQ.MluPs6OSZ5OPL-QU_61Low'
-      }).addTo(mymap);
       },
       false
     );

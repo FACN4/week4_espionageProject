@@ -17,17 +17,11 @@ form {
   text-align: center;
 }
 
-<<<<<<< HEAD
-/* ////////////////TABLET SECOND ///////////*/
-=======
 li:hover{
   background-color: grey;
 }
+/* ////////////////TABLET SECOND ///////////*/
 
-#mapid { height: 180px; }
-
-/* TABLET SECOND */
->>>>>>> master
 @media only screen and (min-width: 480px) {
   h1 {
     font-size: 50px;
