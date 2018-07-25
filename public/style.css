@@ -7,11 +7,25 @@
    width: 75%;
 
 }
+ul {
+  list-style-type: none;
+  margin: 4px 200px 4px;
+}
 
 #hoo {
   display: none;
 }
+.liList{
 
+  background-color: white ;
+}
+.cityName{
+  text-align: center;
+
+}
+.countryName{
+  text-align: right;
+}
 body {
   background-color: #e6ffff;
   font-size: 1.2em;
