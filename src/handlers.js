@@ -1,7 +1,6 @@
 const path = require("path");
 const fs = require("fs");
 const citySearch = require("./citySearch");
-//const cities = require("./cities.js");
 
 var handler500 = function(res) {
   res.writeHead(500, { "content-type": "text/plain" });
