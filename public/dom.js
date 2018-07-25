@@ -4,7 +4,7 @@ console.log(searchInput);
 var sendForm = function() {
   var url = searchWrapper(searchInput.value);
 
-  xhrAPI(url, console.log);
+  xhrAPI(url, appendCities);
 };
 
 //creates a drop down menu from the array of cities. Is called by an XHR request.
@@ -42,8 +42,6 @@ var appendCities = function(arrOfCities) {
     li.appendChild(divCountry);
   });
 };
-
-appendCities(arrOfCities);
 
 //create clickable list items. Ee
 // var clickableItem = function(){
