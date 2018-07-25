@@ -22,7 +22,12 @@ function pixabyXhrApi(query, id) {
   var url = "https://pixabay.com/api/" + apiKey + "&q=" + query;
   var appendimage = function(response) {
     var img = document.getElementById(id);
-    img.src = response.hits[0].largeImageURL;
+    console.log(response.hits);
+    if (response.hits.length === 0) {
+      img.src = "http://www.cricketd8.com/images/notfound.gif";
+    } else {
+      img.src = response.hits[0].largeImageURL;
+    }
   };
   xhrAPI(url, appendimage);
 }

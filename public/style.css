@@ -1,9 +1,6 @@
+/*//////////////////////// MOBILE FIRST//////////////////// */
 /*-------Body and Structure-------*/
-.container{
-  display: grid;
-  width: 95%;
-  margin: auto;
-}
+
 body {
   background-color: #e6ffff;
   font-size: 18px;
@@ -14,16 +11,39 @@ body {
 }
 
 /*--------DropDownMenu--------*/
+.container{
+  display: grid;
+  margin: auto;
+}
 ul {
   list-style-type: none;
-  padding: 0px;
-  margin: 0px;
+  opacity: 0.7;
 }
 ul >li {
   display: grid;
   grid-template-columns: 7fr 3fr;
   background-color: white;
   align-items:center;
+}
+
+input[type=text] {
+  position:
+  width: 80%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  }
+
+input[type=text]:focus {
+  width: 50%;
 }
 .cityName{
   text-align: left;
@@ -35,37 +55,19 @@ ul >li {
 
 /*------Image-------*/
 #pxlrimage {
+  position:absolute;
+  margin: auto;
+  top: 30%;
+  width:100%;
+  max-width: 500px;
   border-radius: 8px;
-  width: 95%;
+  z-index: -1;
 }
 
 
 
-input[type=text] {
-  width: 30%;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  }
-
-    input[type=text] {
-        -webkit-transition: width 0.4s ease-in-out;
-        transition: width 0.4s ease-in-out;
-    }
-
-    input[type=text]:focus {
-        width: 50%;
-    }
-
-
-/*//////////////////////// MOBILE FIRST//////////////////// */
 h1 {
+  font-family: 'Permanent Marker', cursive;
   margin: auto;
   font-size: 35px;
 }
