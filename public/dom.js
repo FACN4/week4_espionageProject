@@ -38,6 +38,9 @@ var appendCities = function(arrOfCities) {
     let li = document.createElement("li");
     let divCity = document.createElement("div");
     let divCountry = document.createElement("div");
+    li.classList.add("liList");
+    divCity.classList.add("cityName");
+    divCountry.classList.add("countryName");
     divCity.textContent = city.name;
     divCountry.textContent = "(" + city.country + ")";
     ul.appendChild(li);
