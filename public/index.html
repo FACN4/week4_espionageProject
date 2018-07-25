@@ -14,9 +14,13 @@
       <h1>Cities of the World</h1>
     </header>
     <section>
-      <form id="searchForm">
+      <form id="searchForm" action="/cities" method="post">
         <input id="searchInput" type="text" name="searchBox" maxlength="30" placeholder="e.g. Nazareth" onkeyup="sendForm()" required>
       </form>
+      <ul id = 'dropdown'>
+        <p></p>
+      </ul>
+      <img id = 'pxlrimage' src = "">
     </section>
   </body>
   <script src="xhr.js"></script>
