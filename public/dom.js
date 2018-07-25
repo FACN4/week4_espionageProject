@@ -1,6 +1,5 @@
 //searchInput from index.HTML
 var searchInput = document.getElementById("searchInput");
-console.log(searchInput);
 
 var sendForm = function() {
   var url = searchWrapper(searchInput.value); // searchWrapper defined in xhr.js
@@ -24,9 +23,12 @@ var appendCities = function(arrOfCities) {
       ul.appendChild(li);
       li.appendChild(divCity);
       li.appendChild(divCountry);
+      var img = document.getElementById("pxlrimage");
+      img.classList.add("blur");
       li.addEventListener(
         "click",
         function(e) {
+          img.classList = "";
           var cityForAPI = e.target.firstChild.textContent;
           var query = city.name;
           var id = "pxlrimage";
@@ -34,7 +36,7 @@ var appendCities = function(arrOfCities) {
             document.getElementById("pxlrimage").src =
               "https://vectortoons.com/wp-content/uploads/2015/07/pile-of-poop-emoji-collection-3-010.jpg";
           } else {
-            pixabyXhrApi(query, id); //
+            pixabyXhrApi(query, id);
           }
           ul.innerHTML = "";
         },
@@ -44,25 +46,16 @@ var appendCities = function(arrOfCities) {
   }
 };
 
-document
-  .getElementById("searchInput")
-  .addEventListener("keypress", function(e) {
-    var key = e.which || e.keyCode;
-    if (key === 13) {
-      var query = searchInput.value;
-      var id = "pxlrimage";
-      if (query.toUpperCase() === "HULL") {
-        document.getElementById("pxlrimage").src =
-          "https://vectortoons.com/wp-content/uploads/2015/07/pile-of-poop-emoji-collection-3-010.jpg";
-      } else {
-        pixabyXhrApi(query, id); //
-      }
+searchInput.addEventListener("keypress", function(e) {
+  var key = e.which || e.keyCode;
+  if (key === 13) {
+    var query = searchInput.value;
+    var id = "pxlrimage";
+    if (query.toUpperCase() === "HULL") {
+      document.getElementById("pxlrimage").src =
+        "https://vectortoons.com/wp-content/uploads/2015/07/pile-of-poop-emoji-collection-3-010.jpg";
+    } else {
+      pixabyXhrApi(query, id); //
     }
-  });
-
-// document.getElementById("pxlrimage").addEventListener("click", function() {
-//   document.getElementById("dropdown").style.opacity = "0.0";
-// });
-// document.getElementById("searchInput").addEventListener("click", function() {
-//   document.getElementById("dropdown").style.opacity = "0.7";
-// });
+  }
+});

@@ -9,7 +9,6 @@ function xhrAPI(url, callback) {
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
       var res = JSON.parse(xhr.responseText);
-      console.log(res);
       return callback(res);
     }
   };
@@ -22,7 +21,6 @@ function pixabyXhrApi(query, id) {
   var url = "https://pixabay.com/api/" + apiKey + "&q=" + query;
   var appendimage = function(response) {
     var img = document.getElementById(id);
-    console.log(response.hits);
     if (response.hits.length === 0) {
       img.src = "http://www.cricketd8.com/images/notfound.gif";
     } else {
