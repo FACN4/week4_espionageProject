@@ -1,4 +1,14 @@
-/* MOBILE FIRST */
+/*/////////Body and Structure////////// */
+
+body {
+  background-color: #ccffff;
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-family: 'Karla', arial, sans-serif;
+  font-weight:400;
+  text-align: center;
+}
+/*//////////////////////// MOBILE FIRST//////////////////// */
 h1 {
   text-align: center;
   font-size: 35px;
@@ -7,14 +17,14 @@ form {
   text-align: center;
 }
 
-/* TABLET SECOND */
+/* ////////////////TABLET SECOND ///////////*/
 @media only screen and (min-width: 480px) {
   h1 {
     font-size: 50px;
   }
 }
 
-/* DESKTOP THIRD */
+/* ///////////////////DESKTOP THIRD //////////////////*/
 @media only screen and (min-width: 1100px) {
 
 }
