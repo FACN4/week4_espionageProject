@@ -1,13 +1,36 @@
 /*/////////Body and Structure////////// */
 
 body {
-  background-color: #ccffff;
+  background-color: #e6ffff;
   font-size: 1.2em;
   line-height: 1.5;
   font-family: 'Karla', arial, sans-serif;
   font-weight:400;
   text-align: center;
 }
+input[type=text] {
+  width: 50%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  }
+/*
+    input[type=text] {
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+
+    input[type=text]:focus {
+        width: 100%;
+    }
+    */
+
 /*//////////////////////// MOBILE FIRST//////////////////// */
 h1 {
   text-align: center;
