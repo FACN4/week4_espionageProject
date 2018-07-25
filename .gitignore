@@ -3,3 +3,4 @@ package-lock.json
 src/.env
 .nyc_output
 src/cities.json
+src/countryNames.json
