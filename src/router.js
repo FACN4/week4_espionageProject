@@ -5,7 +5,7 @@ var router = function(req, res) {
   console.log(url)
 
   if (url === "/") {
-    // run index.html
+
     handlers.handlerHome(req, res);
   }
    else if (url.includes("/citysearch")) {
