@@ -27,17 +27,24 @@ test("sortByNameLength tests", function(t){
 });
 
 test("search tests",function(t){
-  var actual = search.search("y",testJSON1);
-  t.same(actual.length,8, "Search should only return 8 results, only the shortest ones");
-  t.same(actual.includes({
+  var actual1 = search.search("y",testJSON1);
+  t.same(actual1.length,8, "Search should only return 8 results, only the shortest ones");
+  t.same(actual1.includes({
     "country": "GB",
     "name": "Yetminster",
     "lat": "50.89579",
     "lng": "-2.57959"
   }),false, "Search should exclude the largest result names");
+  var actual2 = search.search("zadad");
+  t.same(actual2.length,1, "There should only be one city with with this text");
   t.end();
 });
 
+test("Country code to name tests",function(t){
+  t.same(search.countryCodeToName(testJSON4),testJSON5, "Country code should be converted to country name");
+  t.same(search.countryCodeToName(testJSON6),testJSON6,"Country code should remain if countryNames.json doesn't have the country code");
+  t.end();
+});
 
 const testJSON1 = [
   {
@@ -125,3 +132,28 @@ const testJSON3 = [
     "lng": "-1.08271"
   }
 ];
+
+const testJSON4 = [
+  {
+    "country": "GB",
+    "name": "York",
+    "lat": "53.95763",
+    "lng": "-1.08271"
+  }
+];
+const testJSON5 = [
+    {
+      "country": "United Kingdom",
+      "name": "York",
+      "lat": "53.95763",
+      "lng": "-1.08271"
+    }
+  ];
+const testJSON6 = [
+  {
+    "country": "ELS",
+    "name": "York",
+    "lat": "53.95763",
+    "lng": "-1.08271"
+  }
+]
