@@ -8,27 +8,6 @@ var sendForm = function() {
 };
 
 //creates a drop down menu from the array of cities. Is called by an XHR request.
-const arrOfCities = [
-  {
-    country: "GB",
-    name: "York",
-    lat: "53.95763",
-    lng: "-1.08271"
-  },
-  {
-    country: "GB",
-    name: "Yetminster",
-    lat: "50.89579",
-    lng: "-2.57959"
-  },
-  {
-    country: "GB",
-    name: "Yeovil",
-    lat: "50.94159",
-    lng: "-2.63211"
-  }
-];
-
 var appendCities = function(arrOfCities) {
   var ul = document.getElementById("dropdown");
   ul.innerHTML = "";
@@ -63,3 +42,5 @@ var appendCities = function(arrOfCities) {
     });
   }
 };
+
+// document.getElementById("textInput").addEventListener('keypress')
