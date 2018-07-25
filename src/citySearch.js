@@ -1,10 +1,6 @@
 const citiesJSON = require("./cities.json");
 
-<<<<<<< HEAD
-const search = function(input, cities) {
-=======
-const search = function (input, cities=citiesJSON){
->>>>>>> master
+const search = function(input, cities = citiesJSON) {
   var allMatches = includesSearch(input, cities);
   var sortedMatches = sortByNameLength(allMatches);
   var top8Matches = sortedMatches.slice(0, 8);
