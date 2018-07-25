@@ -4,3 +4,5 @@ src/.env
 .nyc_output
 src/cities.json
 src/countryNames.json
+coverage
+coverage.lcov

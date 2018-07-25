@@ -6,7 +6,8 @@
   "scripts": {
     "go": "nodemon src/server.js",
     "start": "node src/server.js",
-    "test": "nyc tape tests/tests.js | tap-spec"
+    "test": "nyc tape tests/tests.js | tap-spec",
+    "coverage": "nyc --reporter=lcov npm run test"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/FACN4/week4_espionageProject#readme",
   "dependencies": {},
   "devDependencies": {
+    "codecov": "^3.0.4",
     "istanbul": "^0.4.5",
     "nodemon": "^1.18.3",
     "nyc": "^12.0.2",
