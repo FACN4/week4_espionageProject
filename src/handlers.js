@@ -10,7 +10,6 @@ var handler500 = function(res) {
 var handlerHome = function(req, res) {
   fs.readFile(
     path.join(__dirname, "..", "public", "index.html"),
-
     (err, file) => {
       if (err) {
         handler500(res);
@@ -56,7 +55,10 @@ var handlerPublic = function(req, res, url) {
 var handlerCities = function(req, res) {
   let url = req.url;
   let query = url.split("q=")[1];
-  let top8 = citySearch.search(query);
+  let formatedQuery = query.replace("%20"," ");
+  // let filteredQuery = formatedQuery.match(/^[-a-zA-Z\s]*/gm);
+  // console.log(filteredQuery);
+  let top8 = citySearch.search(formatedQuery);
   res.writeHead(200, { "content-type": "application/json" });
   res.end(JSON.stringify(top8));
 };

@@ -1,40 +1,46 @@
-/*/////////Body and Structure////////// */
-#pxlrimage {
-   border-radius: 8px;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 75%;
-
-}
-ul {
-  list-style-type: none;
-  margin: 0.01% 20% 0.01%;
-}
-
-#hoo {
-  display: none;
-}
-
-.liList{
-  background-color: white ;
-}
-.cityName{
-  text-align: center;
-
-}
-.countryName{
-  text-align: right;
-  color : #c2c2a3;
+/*-------Body and Structure-------*/
+.container{
+  display: grid;
+  width: 95%;
+  margin: auto;
 }
 body {
   background-color: #e6ffff;
-  font-size: 1.2em;
+  font-size: 18px;
   line-height: 1.5;
   font-family: 'Karla', arial, sans-serif;
   font-weight:400;
   text-align: center;
 }
+
+/*--------DropDownMenu--------*/
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+ul >li {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  background-color: white;
+  align-items:center;
+}
+.cityName{
+  text-align: left;
+  padding-left: 5%;
+}
+.countryName{
+  text-align: right;
+}
+
+/*------Image-------*/
+#pxlrimage {
+  border-radius: 8px;
+  width: 95%;
+}
+
+
+
 input[type=text] {
   width: 30%;
   box-sizing: border-box;
@@ -67,21 +73,14 @@ form {
   text-align: center;
 }
 
-/* ////////////////TABLET SECOND ///////////*/
-
 
 /* ////////////////TABLET SECOND ///////////*/
 
 li:hover{
   background-color: grey;
 }
-/* ////////////////TABLET SECOND ///////////*/
 
-
-
-/* TABLET SECOND */
-
-
+#mapid { height: 180px; }
 
 /* TABLET SECOND */
 
@@ -92,7 +91,7 @@ li:hover{
 }
 
 /* ///////////////////DESKTOP THIRD //////////////////*/
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1100px) {
 
   #f1_container {
     position: relative;
