@@ -24,7 +24,6 @@ var handlerHome = function(req, res) {
 
 var handlerPublic = function(req, res, url) {
   var extension = url.split(".")[1];
-  console.log(extension);
   var extensionType = {
     html: "text/html",
     css: "text/css",
@@ -56,8 +55,6 @@ var handlerCities = function(req, res) {
   let url = req.url;
   let query = url.split("q=")[1];
   let formatedQuery = query.replace("%20"," ");
-  // let filteredQuery = formatedQuery.match(/^[-a-zA-Z\s]*/gm);
-  // console.log(filteredQuery);
   let top8 = citySearch.search(formatedQuery);
   res.writeHead(200, { "content-type": "application/json" });
   res.end(JSON.stringify(top8));
