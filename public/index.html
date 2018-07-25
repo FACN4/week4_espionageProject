@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <title>Cities</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <link rel="shortcut icon" href="https://user-images.githubusercontent.com/28222381/43135579-8e0af446-8f4e-11e8-8485-6bdc248a4ee8.png" type="image/x-icon" />
   <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,23 +12,30 @@
       <h1>Cities of the World</h1>
     </header>
     <section>
-        <input id="textInput" type="text" rows="1" maxlength="30" placeholder="e.g. Nazareth" autocomplete="off" onkeyup="keyUp()"></input>
+
+      <form id="searchForm" action="/cities" method="post">
+        <input id="searchInput" type="text" name="searchBox" maxlength="30" autocomplete="off" placeholder="e.g. Nazareth" onkeyup="sendForm()" required>
+      </form>
+
       <ul id = 'dropdown'>
 
         <p></p>
       </ul>
-
-      <div id="f1_container">
-<div id="f1_card" class="shadow">
-  <div class="front face">
-      <img id = 'pxlrimage' src = "">
+          <div id="f1_container">
+        <div id="f1_card" class="shadow">
+          <div class="front face">
+         <img id = 'pxlrimage' src = "">
+    </div>
+    <div id= "hoo" class="back face center">
+       <p>Take your mouse Out of me</p>
+  
+   </div>
   </div>
-  <div id= "hoo" class="back face center">
-    <p>Take your mouse Out of me</p>
-
   </div>
-</div>
-</div>
+
+
+      <div id = "mapid"></div>
+
     </section>
   </body>
   <script src="xhr.js"></script>
