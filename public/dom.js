@@ -43,4 +43,19 @@ var appendCities = function(arrOfCities) {
   }
 };
 
-// document.getElementById("textInput").addEventListener('keypress')
+document
+  .getElementById("searchInput")
+  .addEventListener("keypress", function(e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) {
+      var query = searchInput.value;
+      var id = "pxlrimage";
+      pixabyXhrApi(query, id);
+    }
+  });
+document.getElementById("pxlrimage").addEventListener("click", function() {
+  document.getElementById("dropdown").style.opacity = "0.0";
+});
+document.getElementById("searchInput").addEventListener("click", function() {
+  document.getElementById("dropdown").style.opacity = "0.7";
+});
