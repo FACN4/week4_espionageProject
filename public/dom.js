@@ -30,12 +30,13 @@ var appendCities = function(arrOfCities) {
           var cityForAPI = e.target.firstChild.textContent;
           var query = city.name;
           var id = "pxlrimage";
-          if (query === "Hull") {
+          if (query.toUpperCase() === "HULL") {
             document.getElementById("pxlrimage").src =
               "https://vectortoons.com/wp-content/uploads/2015/07/pile-of-poop-emoji-collection-3-010.jpg";
           } else {
             pixabyXhrApi(query, id); //
           }
+          ul.innerHTML = "";
         },
         false
       );
@@ -50,12 +51,18 @@ document
     if (key === 13) {
       var query = searchInput.value;
       var id = "pxlrimage";
-      pixabyXhrApi(query, id);
+      if (query.toUpperCase() === "HULL") {
+        document.getElementById("pxlrimage").src =
+          "https://vectortoons.com/wp-content/uploads/2015/07/pile-of-poop-emoji-collection-3-010.jpg";
+      } else {
+        pixabyXhrApi(query, id); //
+      }
     }
   });
-document.getElementById("pxlrimage").addEventListener("click", function() {
-  document.getElementById("dropdown").style.opacity = "0.0";
-});
-document.getElementById("searchInput").addEventListener("click", function() {
-  document.getElementById("dropdown").style.opacity = "0.7";
-});
+
+// document.getElementById("pxlrimage").addEventListener("click", function() {
+//   document.getElementById("dropdown").style.opacity = "0.0";
+// });
+// document.getElementById("searchInput").addEventListener("click", function() {
+//   document.getElementById("dropdown").style.opacity = "0.7";
+// });

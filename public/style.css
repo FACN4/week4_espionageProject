@@ -1,3 +1,4 @@
+/*//////////////////////// MOBILE FIRST//////////////////// */
 /*-------Body and Structure-------*/
 
 body {
@@ -12,8 +13,6 @@ body {
 /*--------DropDownMenu--------*/
 .container{
   display: grid;
-  width: 80%;
-  max-width: 600px;
   margin: auto;
 }
 ul {
@@ -25,6 +24,26 @@ ul >li {
   grid-template-columns: 7fr 3fr;
   background-color: white;
   align-items:center;
+}
+
+input[type=text] {
+  position:
+  width: 80%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  }
+
+input[type=text]:focus {
+  width: 50%;
 }
 .cityName{
   text-align: left;
@@ -39,7 +58,7 @@ ul >li {
   position:absolute;
   margin: auto;
   top: 30%;
-  width:50%;
+  width:100%;
   max-width: 500px;
   border-radius: 8px;
   z-index: -1;
@@ -47,31 +66,8 @@ ul >li {
 
 
 
-input[type=text] {
-  width: 30%;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  }
-
-    input[type=text] {
-        -webkit-transition: width 0.4s ease-in-out;
-        transition: width 0.4s ease-in-out;
-    }
-
-    input[type=text]:focus {
-        width: 50%;
-    }
-
-
-/*//////////////////////// MOBILE FIRST//////////////////// */
 h1 {
+  font-family: 'Permanent Marker', cursive;
   margin: auto;
   font-size: 35px;
 }
