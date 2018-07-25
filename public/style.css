@@ -15,8 +15,8 @@ ul {
 #hoo {
   display: none;
 }
-.liList{
 
+.liList{
   background-color: white ;
 }
 .cityName{
@@ -25,6 +25,7 @@ ul {
 }
 .countryName{
   text-align: right;
+  color : #c2c2a3;
 }
 body {
   background-color: #e6ffff;
@@ -84,7 +85,7 @@ li:hover{
 }
 
 /* ///////////////////DESKTOP THIRD //////////////////*/
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1000px) {
 
   #f1_container {
     position: relative;
