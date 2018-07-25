@@ -10,6 +10,7 @@
 ### Goals
 - [X] We expect back-end testing using tape (test as many components as you can) and basic front-end testing. Please note that we expect tests on pure functions and not on the router.
 
+
 - [X] Host your project on heroku, see resource.
 
 - [X] Use module.exports and require to break a single large server file into smaller modules.
@@ -19,6 +20,10 @@
 
 ## Project software architecture
 ![plan](https://user-images.githubusercontent.com/28222381/43131020-ad743c9c-8f40-11e8-92a4-aa558d629b9f.png)
+
+
+## NYC coverage tests 
+![tests](https://user-images.githubusercontent.com/28222381/43207803-865ad200-9031-11e8-8ab8-63750e538bc5.png)
 
 This Project done by Ben Den & T
 
