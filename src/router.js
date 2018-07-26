@@ -1,7 +1,7 @@
 const handlers = require("./handlers");
 
-var router = function(req, res) {
-  var url = req.url;
+const router = function(req, res) {
+  let url = req.url;
 
   if (url === "/") {
     handlers.handlerHome(req, res);

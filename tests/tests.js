@@ -1,5 +1,5 @@
-var test = require("tape");
-var search = require("../src/citySearch");
+const test = require("tape");
+const search = require("../src/citySearch");
 
 test("Tape working", function(t) {
   t.equal(1, 1, "Tape is working");
@@ -27,7 +27,7 @@ test("sortByNameLength tests", function(t){
 });
 
 test("search tests",function(t){
-  var actual1 = search.search("y",testJSON1);
+  let actual1 = search.search("y",testJSON1);
   t.same(actual1.length,8, "Search should only return 8 results, only the shortest ones");
   t.same(actual1.includes({
     "country": "GB",
@@ -35,7 +35,7 @@ test("search tests",function(t){
     "lat": "50.89579",
     "lng": "-2.57959"
   }),false, "Search should exclude the largest result names");
-  var actual2 = search.search("zadad");
+  let actual2 = search.search("zadad");
   t.same(actual2.length,1, "There should only be one city with with this text");
   t.end();
 });

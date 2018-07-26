@@ -2,12 +2,12 @@ const path = require("path");
 const fs = require("fs");
 const citySearch = require("./citySearch");
 
-var handler500 = function(res) {
+const handler500 = function(res) {
   res.writeHead(500, { "content-type": "text/plain" });
   res.end("server error");
 };
 
-var handlerHome = function(req, res) {
+const handlerHome = function(req, res) {
   fs.readFile(
     path.join(__dirname, "..", "public", "index.html"),
     (err, file) => {
@@ -22,9 +22,9 @@ var handlerHome = function(req, res) {
   );
 };
 
-var handlerPublic = function(req, res, url) {
-  var extension = url.split(".")[1];
-  var extensionType = {
+const handlerPublic = function(req, res, url) {
+  let extension = url.split(".")[1];
+  let extensionType = {
     html: "text/html",
     css: "text/css",
     js: "application/javascript",
@@ -51,7 +51,7 @@ var handlerPublic = function(req, res, url) {
 
 };
 
-var handlerCities = function(req, res) {
+const handlerCities = function(req, res) {
   let url = req.url;
   let query = url.split("q=")[1];
   let formatedQuery = query.replace("%20"," ");
@@ -60,7 +60,7 @@ var handlerCities = function(req, res) {
   res.end(JSON.stringify(top8));
 };
 
-var handler404 = function(req, res) {
+const handler404 = function(req, res) {
   fs.readFile(
     path.join(__dirname, "..", "public", "404.html"),
     "utf8",
