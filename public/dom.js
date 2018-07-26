@@ -15,6 +15,7 @@ var appendCities = function(arrOfCities) {
       let li = document.createElement("li");
       let divCity = document.createElement("div");
       let divCountry = document.createElement("div");
+      li.setAttribute("tabindex", "0");
       li.classList.add("liList");
       divCity.classList.add("cityName");
       divCountry.classList.add("countryName");
