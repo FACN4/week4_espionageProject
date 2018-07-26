@@ -24,7 +24,7 @@ function pixabyXhrApi(query, id) {
     if (response.hits.length === 0) {
       img.src = "http://www.cricketd8.com/images/notfound.gif";
     } else {
-      img.src = response.hits[0].largeImageURL;
+      img.src = response.hits[Math.floor(Math.random() * 10)].largeImageURL;
     }
   };
   xhrAPI(url, appendimage);
