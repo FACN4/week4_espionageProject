@@ -1,18 +1,18 @@
 /*//////////////////////// MOBILE FIRST//////////////////// */
 /*-------Body and Structure-------*/
-
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 body {
-  background-color: #e6ffff;
   font-size: 18px;
   line-height: 1.5;
   font-family: 'Karla', arial, sans-serif;
   font-weight:400;
   text-align: center;
+  background-image: url("https://t3.ftcdn.net/jpg/00/81/07/52/240_F_81075226_U02GGgncqRH0hEdYFNmHSeJKCUOzAq4V.jpg");
 }
 h1 {
   font-family: 'Permanent Marker', cursive;
   margin: auto;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 /*--------DropDownMenu--------*/
@@ -101,9 +101,10 @@ li:hover{
     width:60%;
   }
   #pxlrimage {
+    position:absolute;
     left: 15%;
     width: 70%;
-    top: 30%;
+    top: 35%;
   }
 }
 
