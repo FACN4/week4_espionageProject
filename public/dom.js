@@ -30,6 +30,7 @@ var appendCities = function(arrOfCities) {
         function(e) {
           img.classList = "";
           var cityForAPI = e.target.firstChild.textContent;
+          searchInput.value = cityForAPI;
           var query = city.name;
           var id = "pxlrimage";
           if (query.toUpperCase() === "HULL") {
